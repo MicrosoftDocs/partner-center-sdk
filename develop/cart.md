@@ -44,7 +44,7 @@ Represents one item contained in a cart.
 | quantity             | int                         | The number of licenses or instances.                                                  |
 | currencyCode         | string                      | The currency code.                                                                    |
 | billingCycle         | Object                      | The type of billing cycle set for the current period.                                 |
-| participants         | List of Object String pairs | A collection of participants on the purchase.                                         |
+| participants         | List of Object String pairs | A collection of PartnerId on Record (MPNID) on the purchase.                                         |
 | provisioningContext  | Dictionary<string, string>  | A context used for provisioning of offer.                                             |
 | orderGroup           | string                      | A group to indicate which items can be placed together.                               |
 | error                | Object                      | Applied after cart is created in case of an error.                                    |
