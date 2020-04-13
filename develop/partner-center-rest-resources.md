@@ -202,7 +202,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="service-costs-resources.md">ServiceCosts</a></td>
+<td><a href="self-serve-policy-resources.md">SelfServePolicy</a></td>
 <td><ul>
 <li>ServiceCostsSummary</li>
 <li>ServiceCostsLineItem</li>
@@ -210,6 +210,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
+<td><a href="service-costs-resources.md">ServiceCosts</a></td>
+<td><ul>
+<li>ServiceCostsSummary</li>
+<li>ServiceCostsLineItem</li>
+<li>ServiceCostsSummaryLinks</li>
+</ul></td>
+</tr>
+<tr class="odd">
 <td><a href="service-request-resources.md">ServiceRequest</a></td>
 <td><ul>
 <li>ServiceRequest</li>
@@ -219,7 +227,7 @@ samples](partner-center-samples.md) section.
 <li>SupportTopic</li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="subscription-resources.md">Subscription</a></td>
 <td><ul>
 <li>Subscription</li>
@@ -230,7 +238,7 @@ samples](partner-center-samples.md) section.
 <li>RegisterSubscription</li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="subscription-usage-resources.md">Subscription Usage</a></td>
 <td><ul>
 <li>SubscriptionDailyUsageRecord <em>(Obsolete)</em></li>
@@ -238,7 +246,7 @@ samples](partner-center-samples.md) section.
 <li>SubscriptionUsageSummary</li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="upgrade-resources.md">Upgrade</a></td>
 <td><ul>
 <li>Upgrade</li>
@@ -247,7 +255,7 @@ samples](partner-center-samples.md) section.
 <li>UserLicenseError</li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="user-resources.md">User</a></td>
 <td><ul>
 <li>User</li>
@@ -256,7 +264,7 @@ samples](partner-center-samples.md) section.
 <li>UserMember</li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="utility-resources.md">Utility Resources</a></td>
 <td><ul>
 <li>Address</li>

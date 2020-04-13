@@ -64,6 +64,12 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Assign licenses to a user](assign-licenses-to-a-user.md)
 - [Check which licenses are assigned to a user](check-which-licenses-are-assigned-to-a-user.md) 
 
+**Manage a customers self serve policies**
+- [Create a self serve policy](create-a-self-serve-policy.md)
+- [Delete a self serve policy](delete-a-self-serve-policy.md)
+- [Get a list of self serve policies](get-a-list-of-self-serve-policies.md)
+- [Get a self serve policy by ID](get-a-self-serve-policy-by-id.md)
+
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 
  
