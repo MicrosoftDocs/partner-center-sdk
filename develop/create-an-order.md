@@ -173,14 +173,6 @@ If successful, the method returns an [Order](order-resources.md) resource in the
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-This method returns the following error codes:
-
-| HTTP Status Code     | Error code   | Description                                                                                               |
-|----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
-| 400                  | 2093         | Inventory is not available for the catalog item selected.                                                 |
-| 400                  | 2094         | Subscription is not a valid Azure subscription. Only applicable for Azure Reserved VM Instance purchase.     |
-| 400                  | 2095         | Subscription is not enabled for an Azure Reserved VM Instance purchase. |
-
 ### Response example
 
 ```http

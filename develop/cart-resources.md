@@ -59,6 +59,10 @@ Represents one item contained in a cart line item.
 |-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
 | termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year). |
 
+### Response success and error codes
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
+
 ## CartError
 
 Represents an error that occurs after a cart is created.
@@ -67,23 +71,6 @@ Represents an error that occurs after a cart is created.
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
 | errorCode        | [CartErrorCode](#carterrorcode) | The type of cart error.                                                                       |
 | errorDescription | string                                 | The error description, including any notes about supported values, default values, or limits. |
-
-## CartErrorCode
-
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of cart error.
-
-| Value                                | Position | Description                                             |
-|--------------------------------------|----------|---------------------------------------------------------|
-| Unknown                              | 0        | Default value.                                          |
-| CurrencyIsNotSupported               | 10000    | The currency is not supported for the specified market. |
-| CatalogItemIdIsNotValid              | 10001    | The catalog item ID is not valid.                       |
-| QuotaNotAvailable                    | 10002    | There is not enough quota available.                    |
-| InventoryNotAvailable                | 10003    | The inventory is not available for the selected offer.  |
-| ParticipantsIsNotSupportedForPartner | 10004    | Setting participants is not supported for this partner. |
-| UnableToProcessCartLineItem          | 10006    | Unable to process the cart line item.                   |
-| SubscriptionIsNotValid               | 10007    | The subscription is not valid.                          |
-| SubscriptionIsNotEnabledForRI        | 10008    | The subscription is not enabled for Azure reservations. |
-| SandboxLimitExceeded                 | 10009    | The sandbox limit has been exceeded.                    |
 
 ## CartCheckoutResult
 
@@ -103,51 +90,3 @@ Represents an error that occurs during a cart checkout when an order is created.
 | orderGroupId | string | The order group ID of the order with the error. |
 | code         | int    | The error code.                                 |
 | description  | string | The description of the error.                   |
-
-## OrderErrorCode
-
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of order error.
-
-| Value | Position | Description |
-| --- | --- | --- |
-| PartnerTokenMissing | 800001 | Partner Token missing in request context. |
-| InvalidInput | 800002 | Invalid request input. |
-| ServiceException | 800003 | Unexpected service error. |
-| InvalidOfferId | 800004 | Invalid offer ID. |
-| CreateOrderError | 800005 | Create order is not successful. |
-| ProvisioningStatusNotFound | 800007 | Unable to retrieve provisioning information. |
-| CartIdNotFound | 800008 | Unable to retrieve cart ID. |
-| CartItemErrorInCreateOrder | 800009 | Error in Cart item(s). |
-| InventoryNotAvailable | 800010 | Inventory is not available for this catalog item. |
-| AzureSubscriptionNotValid | 800011 | This subscription is not a valid Azure subscription. |
-| SubscriptionIsNotActive | 800012 | This subscription is not an active subscription. |
-| SubscriptionIsNotEnabledForRI | 800013 | This subscription is not enabled for RI purchase. |
-| PendingAdjustment | 800014 | There is a pending adjustment requested for this order. |
-| MpnIdNotFound | 800015 | MPN Id is not found. |
-| NotValidIndirectResellerMpnId | 800016 | MPN Id is not a valid Indirect Reseller. |
-| InvalidQuantity | 800017 | The quantity is not available for this catalog item. |
-| SandboxLimitExceeded | 800018 | The sandbox limit has been met. |
-| SandboxTenantOnly | 800019 | This operation is only enabled for sandbox tenants. |
-| CatalogItemNotEligibleForPurchase | 800020 | The catalog item is not eligible for purchase. |
-| SubscriptionIsNotValid | 800021 | This subscription is not a valid subscription. |
-| ManualReviewRequired | 800022 | You may be eligible for this transaction. Please contact Support for help.|
-| InsufficientFunds | 800023 | You are not eligible for this transaction because your Credit Line is not reaching minimum threshold for this purchase.Please update your order(or) contact Support for help. |
-| ReviewCancelled | 800024 | You are not eligible for this transaction. |
-| LineOfCreditNotDefined | 800025 | You are not eligible for this transaction because your Credit Line is not reaching minimum threshold for this purchase. Please update your order (or) contact Support for help. |
-| RiskError | 800026 | You are not eligible for this transaction. |
-| SubscriptionNotRegistered | 800030 | This subscription is not registered. |
-| PurchaseSystemNotSupported | 800031 | Purchase system not supported. |
-| ConditionFailed | 800036 | Pre-condition failed. |
-| AssetIdNotFound | 800037 | Asset ID not found. |
-| AssetFutureBillingInfoNotFound | 800038 | Asset FutureBillingInfo not found. |
-| ResellerProgramStatusNotActive | 800039 | Reseller program status is not active. |
-| AssetStatusChangeNotValid | 800040 | Asset status cannot be changed to **{0}** from **{1}**. |
-| ItemAlreadyActivated | 800041 | This item has already been activated. |
-| NotSupported | 800042 | Not supported. |
-| PricingAccessForbidden | 800043 | Access to pricing information is not granted. |
-| OrderInProgress | 800060 | Your order is in progress. Please check your order history for recent orders in few minutes. |
-| OrderCannotBeCancelled | 800061 | Order cannot be cancelled. |
-| ReviewRejected | 800062 | You are not eligible for this transaction. |
-| CancelLegacyOrder | 800063 | This order **{0}** cannot be cancelled. Use `PATCH /customers/{1}/subscriptions/<subscriptionId>` to suspend subscriptions. |
-| CartProcessedByAnotherRequest | 800064 | Cart **{0}** is being processed by another request. |
-| CartCheckOutNotAllowedWhenStatusIsOrdered | 800065 | Cannot checkout an already submitted cart **{0}**. |
