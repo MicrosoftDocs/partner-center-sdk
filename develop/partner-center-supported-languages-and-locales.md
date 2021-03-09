@@ -176,7 +176,7 @@ The following table lists the cultures and International Standards Organization 
 | Montenegro                               | ME                       | MNE                      | sr-Latn-ME / en-US                    |
 | Montserrat                               | MS                       | MSR                      | en-US                                 |
 | Morocco                                  | MA                       | MAR                      | ar-MA / en-US                         |
-| Mozambique                               | MZ                       | MOZ                      | pt-PT / en-US                         |
+| Mozambique                               | MZ                       | MOZ                      | pt-PT                                 |
 | Myanmar                                  | MM                       | MMR                      | en-US                                 |
 | Namibia                                  | NA                       | NAM                      | en-GB / en-US                         |
 | Nauru                                    | NR                       | NRU                      | en-US                                 |
